@@ -1,0 +1,42 @@
+### create a new user
+POST http://localhost:3300/api/users/signup
+Content-Type: application/json
+
+{
+  "email": "test2@test.com",
+  "password": "1111",
+  "lastname": "test2",
+  "firstname": "test2"
+}
+
+### sign in a user
+POST http://localhost:3300/api/users/signin
+Content-Type: application/json
+
+{
+  "email": "test2@test.com",
+  "password": "1111"
+}
+
+### sign out a user
+POST http://localhost:3300/api/users/signout
+
+### get current user
+GET http://localhost:3300/api/users/current
+
+### get a user with agiven id
+GET http://localhost:3300/api/users/1
+
+### Find all users with a given email
+GET http://localhost:3300/api/user?email=test1@test.com
+
+### update a user with a given id
+PATCH http://localhost:3300/api/users/2
+Content-Type: application/json
+
+{
+"lastname": "TEST1"
+}
+
+### Delete a user with a given id
+DELETE http://localhost:3300/api/users/1
